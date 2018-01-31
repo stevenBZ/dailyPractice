@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>HTML 文本格式化</h1>
+    <h2>注意原则</h2>
+    <p>
+        <pre>
+        很多标签都可以用来改变文本的外观，并为文本关联其隐藏的含义。
+        总地来说，这些标签可以分成两类：基于内容的样式（content-based style）和物理样式（physical style）。
+
+        请注意，基于内容的样式会赋予页面更强的语义性，使浏览器可以更好地理解和处理页面，开发者应该多使用这些样式，它们包括
+        &lt;abbr&gt;
+        &lt;acronym&gt;(HTML5不支持)
+        &lt;cite&gt;
+        &lt;code&gt;
+        &lt;dfn&gt;
+        &lt;em&gt;
+        &lt;kbd&gt;
+        &lt;samp&gt;(很少用)
+        &lt;strong&gt;
+        &lt;var&gt;
+
+        而物理标签大多只是控制文本的外观，这可以用样式表进行更好的处理，所以应该避免使用，它们包括 
+        &lt;b&gt;
+        &lt;big&gt;
+        &lt;i&gt;
+        &lt;s&gt;
+        &lt;small&gt;
+        &lt;strike&gt;
+        &lt;sub&gt;
+        &lt;sup&gt;
+        &lt;tt&gt;
+    </pre>
+    </p>
+    <h2>文本格式化标签</h2>
+    <table border='1'>
+       <tr>
+           <td>&lt;b&gt;</td>
+           <td>定义粗体文本</td>
+           <td> <b>测试文字</b></td>
+       </tr>
+       <tr>
+            <td>&lt;big&gt;</td>
+            <td>定义大号字</td>
+            <td> <big>测试文字</big></td>
+       </tr>
+       <tr>
+            <td>&lt;em&gt;</td>
+            <td>定义着重文字</td>
+            <td> <em>测试文字</em></td>
+       </tr>
+       <tr>
+            <td>&lt;i&gt;</td>
+            <td>定义斜体字</td>
+            <td> <i>测试文字</i></td>
+       </tr>
+       <tr>
+            <td>&lt;small&gt;</td>
+            <td>定义小号字</td>
+            <td> <small>测试文字</small></td>
+       </tr>
+        <tr>
+            <td>&lt;strong&gt;</td>
+            <td>定义加重语气</td>
+            <td> <strong>测试文字</strong></td>
+        </tr>
+        <tr>
+            <td>&lt;sub&gt;</td>
+            <td>定义下标字</td>
+            <td> <sub>测试文字</sub></td>
+        </tr>
+        <tr>
+            <td>&lt;sup&gt;</td>
+            <td>定义上标字</td>
+            <td> <sup>测试文字</sup></td>
+        </tr>
+        <tr>
+            <td>&lt;ins&gt;</td>
+            <td>定义插入字</td>
+            <td> <ins>测试文字</ins></td>
+        </tr>
+        <tr>
+            <td>&lt;del&gt;</td>
+            <td>定义删除字</td>
+            <td> <del>测试文字</del></td>
+        </tr>
+    </table>
+
+    <h2>“计算机输出标签”</h2>
+    <table border="1">
+        <tr>
+            <td>&lt;code&gt;</td>
+            <td>定义计算机代码</td>
+            <td> <code>printf('hello world!')</code></td>
+        </tr>
+        <tr>
+            <td>&lt;kbd&gt;</td>
+            <td>定义键盘码</td>
+            <td> <kbd>Shift</kbd></td>
+        </tr>
+        <tr>
+            <td>&lt;samp&gt;</td>
+            <td>定义计算机代码样本</td>
+            <td> <samp>sample</samp></td>
+        </tr>
+        <tr>
+            <td>&lt;tt&gt;</td>
+            <td>定义打字机代码</td>
+            <td> <samp>hello world</samp></td>
+        </tr>
+        <tr>
+            <td>&lt;var&gt;</td>
+            <td>定义变量</td>
+            <td> <var>hello world</var></td>
+        </tr>
+        <tr>
+            <td>&lt;pre&gt;</td>
+            <td>定义预格式文本（保留空格和缩进）</td>
+            <td> 
+                <pre>
+                    hello world!
+                      can I help you?
+                </pre>
+            </td>
+        </tr>
+    </table>
+
+    <h2>引用、引用和术语定义</h2>
+    <table border="1">
+        <tr>
+            <td>&lt;abbr&gt;</td>
+            <td>定义缩写</td>
+            <td> <abbr title='Defense of the Ancients'>Dota</abbr> is a moba game</td>
+        </tr>
+        <tr>
+            <td>&lt;address&gt;</td>
+            <td>定义地址</td>
+            <td> <address>#20A, 2345 Belmont Avenue, Durham, NC， 27700</address></td>
+        </tr>
+        <tr>
+            <td>&lt;bdo&gt;</td>
+            <td>定义文字方向(ltr/rtl)</td>
+            <td> <bdo dir='rtl'>Here is some text</bdo></td>
+        </tr>
+        <tr>
+            <td>&lt;blockquote&gt;</td>
+            <td>标记长的引用</td>
+            <td> <blockquote>请注意，浏览器在 blockquote 元素前后添加了换行，并增加了外边距。</blockquote></td>
+        </tr>
+        <tr>
+            <td>&lt;q&gt;</td>
+            <td>定义短的引用语</td>
+            <td> 
+                    &lt;q&gt; 标签用于简短的行内引用。 
+            </td>
+        </tr>
+        <tr>
+                <td>&lt;cite&gt;</td>
+                <td>定义引用、引证</td>
+                <td> &lt;cite&gt;标签通常表示它所包含的文本对某个参考文献的引用，比如书籍或者杂志的标题。如：<cite>Playboy</cite></td>
+        </tr>
+        <tr>
+                <td>&lt;dfn&gt;</td>
+                <td>定义一个定义项目</td>
+                <td> &lt;dfn&gt; 标签可标记那些对特殊术语或短语的定义。如：<dfn>fast Fourier transform</dfn></td>
+        </tr>
+    </table>
+</body>
+</html>

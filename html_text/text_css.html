@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>文本的CSS学习</title>
+    <style>
+        #intro_table th{background:#3f3f3f;color:#fff;}
+        #intro_table,#intro_table tr th, #intro_table tr td { border:1px solid #3f3f3f; }
+        #intro_table th,#intro_table td{font-size:.8rem;height:1.2rem;line-height:1.2rem;}
+        #intro_table { text-align: center; border-collapse: collapse; padding:2px;}  
+
+       .text-test .direction{
+           width:200px;
+           border:1px solid gray;
+           margin-top:2px;
+       }
+       .text-test .ltr{
+           direction: ltr;
+       }
+       .text-test .rtl{
+           direction: rtl;
+       }
+    </style>
+</head>
+<body>
+    <h1>文本的CSS学习</h1>
+    <h2>CSS文本属性</h2>
+    <table id='intro_table'>
+       <tr>
+           <th>属性</th>
+           <th>描述</th>
+       </tr>
+       <tr>
+           <td>color</td>
+           <td>设置文本颜色。</td>
+       </tr>
+       <tr>
+            <td>direction</td>
+            <td>设置文本方向。</td>
+       </tr>
+           <tr>
+           <td>line-height</td>
+           <td>设置行高。</td>
+       </tr>
+       <tr>
+           <td>letter-spacing</td>
+           <td>设置字符间距。</td>
+       </tr>
+       <tr>
+           <td>text-align</td>
+           <td>对齐元素中的文本。</td>
+       </tr>
+       <tr>
+           <td>text-decoration</td>
+           <td>向文本添加修饰。</td>
+       </tr>
+       <tr>
+           <td>text-indent</td>
+           <td>缩进元素中文本的首行。</td>
+       </tr>
+       <tr>
+           <td>text-transform</td>
+           <td>控制元素中的字母。</td>
+       </tr>
+       <tr>
+           <td>white-space</td>
+           <td>设置元素中空白的处理方式。</td>
+       </tr>
+       <tr>
+           <td>word-spacing</td>
+           <td>设置字间距。</td>
+       </tr>
+    </table>
+
+    <h2>color</h2>
+    <p id='text-color'>
+        请使用合理的背景颜色和文本颜色搭配，这样可以提高文本的可读性。
+    </p>
+
+    <h2>direction</h2>    
+    <p id="text-direction">
+        direction 属性规定文本的方向 / 书写方向。
+    </p>
+    <div class='text-test'>
+        <div class="direction ltr">ltr</div>
+        <div class="direction rtl">rlt</div>
+    </div>
+
+    <h2>line-height</h2>
+    <p id='text-line-height'>
+        设置行高。
+    </p>
+</body>
+</html>
