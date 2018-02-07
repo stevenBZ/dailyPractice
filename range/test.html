@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+          *{
+          margin:0;
+          padding:0;
+      }
+      #box{
+          width:200px;
+          height:100px;
+          background:burlywood;
+          box-sizing: border-box;
+          border:1px solid #000;
+          position: relative;
+      }
+      #range{
+          position: absolute;
+          width:180px;
+          height:2px;
+          background: #000;
+          top:49px;
+          left:10px;
+      }
+      #range::before,#range::after{
+          content:'';
+          width: 10px;
+          height: 10px;
+          background: #000;
+          border-radius: 5px;
+      }
+      #range::before{
+          position:absolute;
+          left:-5px;
+          top:-5px;
+      }
+      #range::after{
+          position:absolute;
+          right:-5px;
+          top:-5px;
+      }
+      #cursor{
+          width:10px;
+          height:10px;
+          border-radius: 5px;
+          background: blue;
+          position: absolute;
+          left:5px;
+          top:45px;
+      }
+</style>
+<body>
+    <div id="box">
+        <div id="range"></div>
+        <div id="cursor"></div>
+    </div>
+</body>
+<script>
+    var box=document.querySelector('#box')
+    // document.onclick=function(e){
+    //     console.log('触发事件',this.id)
+    // }
+    box.addEventListener('click',function(e){
+        console.log('事件被触发')
+    })
+</script>
+</html>
