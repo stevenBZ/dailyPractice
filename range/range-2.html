@@ -61,12 +61,39 @@
     </div>
 </body>
 <script>
-    var box=document.querySelector('#box')
-    // document.onclick=function(e){
-    //     console.log('触发事件',this.id)
-    // }
-    box.addEventListener('click',function(e){
-        console.log('事件被触发')
-    })
+     var cursor=document.querySelector('#cursor')
+     var box=document.querySelector('#box')
+     var range=document.querySelector('#range')
+     cursor.onmousedown=function(){
+         cursor.onmousemove=function(e){
+            e.stopPropagation()
+         }
+         range.onmousemove=function(e){
+            e.stopPropagation()
+         }
+         box.onmousemove=function(e){
+             console.log(e.target)
+             var cursorX=e.offsetX
+             if(cursorX<=5)
+                 cursorX=5
+             else if(cursorX>=185)
+                 cursorX=185
+             cursor.style.left=cursorX+'px'
+         }
+     }
+     document.onmouseup=function(){
+         box.onmousemove=null
+     }
+     box.onclick=function(e){
+         var cursorX=e.offsetX
+         var cursorY=e.offsetY
+         if(cursorY>=40&&cursorY<=60){
+             if(cursorX<=5)
+                 cursorX=5
+             else if(cursorX>=185)
+                 cursorX=185
+         cursor.style.left=cursorX+'px'
+         }
+     }
 </script>
 </html>
