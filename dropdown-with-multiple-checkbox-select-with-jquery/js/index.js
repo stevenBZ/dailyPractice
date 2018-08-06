@@ -34,6 +34,5 @@ $('.mutliSelect input[type="checkbox"]').on('click', function() {
     $('span[title="' + title + '"]').remove();
     var ret = $(".hida");
     $('.dropdown dt a').append(ret);
-
   }
 });
