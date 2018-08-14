@@ -42,5 +42,5 @@ const mergePromise = ajaxArray => {
 
 mergePromise([ajax1, ajax2, ajax3]).then(data => {
 	console.log('done');
-	console.log(data); 
+	console.log(data); ///
 });
