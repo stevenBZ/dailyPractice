@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <ul class="ul">
+        <li class="li1">111</li>
+        <li class="li2">222</li>
+        <li class="li3">333</li>
+    </ul>
+    <script>
+        let ul = document.querySelector('.ul');
+        let bubble = function(e){
+            console.log(e.target.className);
+            console.log(e.currentTarget);
+            // if(e.target.className === 'li3'){
+            //     console.log('ok');
+            // }
+        }
+        ul.addEventListener('click', bubble, true);
+    </script>
+</body>
+</html>
